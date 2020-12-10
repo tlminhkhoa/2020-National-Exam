@@ -34,7 +34,7 @@ def countCategoryFunction(data):
         SpeType = SpeType.sort_values()
         return SpeType 
 def figure1Preprocess():
-    data = pd.read_csv("..//..//Data//csv//2020_National_ENG.csv",index_col)
+    data = pd.read_csv("..//..//Data//csv//2020_National_ENG.csv",index_col = 0)
     SpeType = parallelize_dataframe(data,countCategoryFunction)
     SpeType.to_csv("SpeType.csv")
 if __name__ == '__main__':
